@@ -17,78 +17,78 @@
         .banner h1 {
             font-size: 36px;
             margin: 0;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 16px;
+        }
+
+    .movie-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
-        table th, table td {
-            padding: 10px;
+    .movie-tile {
+        width: 30%;
+        margin: 1%;
+        background: #333;
+        border: 1px solid #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+    }
+
+        .movie-tile a {
+            display: block;
             text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        table thead tr {
-            background-color: #333;
+            text-decoration: none;
             color: #fff;
+            font-weight: bold;
         }
 
-        table tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .movie-tile img {
+            max-width: 100%;
+            height: auto;
         }
+
+    body {
+        background-color: #222;
+        color: #fff;
+    }
+
+    table {
+        background-color: #333;
+        color: #fff;
+    }
 
         table a {
-            display: inline-block;
-            padding: 8px 16px;
-            text-decoration: none;
             background-color: #50c878;
             color: #fff;
-            border: 1px solid #50c878;
-            border-radius: 4px;
-            transition: background-color 0.3s;
         }
 
             table a:hover {
                 background-color: #fff;
                 color: #50c878;
             }
+
+    .banner {
+        background: linear-gradient(to right, #ff8000, #ffbf00);
+        color: #333;
+        }
 </style>
 
 <div class="banner">
-    <h1>Korean Movies Collection</h1>
+    <h1>NEXFLEEEEECE</h1>
 </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th></th>
-            <th>Name</th>
-            <th></th>
-            <th>Rating</th>
-            <th></th>
-            <th>Release Year</th>
-            <th></th>
-            <th>Genre</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var movie in Model)
-        {
-            <tr>
-                <td>@movie.Id</td>
-                <td></td>
-                <td ><a href = "/movies/getmovie/@movie.Id" > @movie.Name </a></td>
-                <td></td>
-                <td>@movie.Rating</td>
-                <td></td>
-                <td>@movie.ReleaseYear</td>
-                <td></td>
-                <td>@movie.Genre</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="movie-tiles">
+    @foreach (var movie in Model)
+    {
+        <div class="movie-tile">
+            <a href="/movies/getmovie/@movie.Id">
+                <img src="@movie.PosterImageUrl" alt="@movie.Name" />
+                <h3>@movie.Name</h3>
+                <p>Rating: @movie.Rating</p>
+                <p>Release Year: @movie.ReleaseYear</p>
+                <p>Genre: @movie.Genre</p>
+            </a>
+        </div>
+    }
+</div>
 

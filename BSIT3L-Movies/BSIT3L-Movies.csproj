@@ -10,9 +10,43 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
+    <Content Remove="wwwroot\Content\Images\BeWithYouPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\CenturyGirlPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\DreamPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\JungEPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\KillBoksoonPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\LoveAndLeashesPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\OnYourWeddingDayPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\ParasitePoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\SeoulVibePoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\SpaceSweepersPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\SweetAndSourPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\TheBeautyInsidePoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\ThePiratesPoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\TuneInForLovePoster.jpg" />
+    <Content Remove="wwwroot\Content\Images\UnlockedPoster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Views\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Movies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Content\Images\CenturyGirlPoster.jpg" />
+    <None Include="wwwroot\Content\Images\BeWithYouPoster.jpg" />
+    <None Include="wwwroot\Content\Images\DreamPoster.jpg" />
+    <None Include="wwwroot\Content\Images\JungEPoster.jpg" />
+    <None Include="wwwroot\Content\Images\KillBoksoonPoster.jpg" />
+    <None Include="wwwroot\Content\Images\LoveAndLeashesPoster.jpg" />
+    <None Include="wwwroot\Content\Images\OnYourWeddingDayPoster.jpg" />
+    <None Include="wwwroot\Content\Images\ParasitePoster.jpg" />
+    <None Include="wwwroot\Content\Images\SeoulVibePoster.jpg" />
+    <None Include="wwwroot\Content\Images\SpaceSweepersPoster.jpg" />
+    <None Include="wwwroot\Content\Images\SweetAndSourPoster.jpg" />
+    <None Include="wwwroot\Content\Images\TheBeautyInsidePoster.jpg" />
+    <None Include="wwwroot\Content\Images\ThePiratesPoster.jpg" />
+    <None Include="wwwroot\Content\Images\TuneInForLovePoster.jpg" />
+    <None Include="wwwroot\Content\Images\UnlockedPoster.jpg" />
   </ItemGroup>
 </Project>
